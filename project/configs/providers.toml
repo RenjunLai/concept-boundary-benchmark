@@ -1,0 +1,65 @@
+[zhipu]
+protocol = "openai_compatible"
+base_url = "https://open.bigmodel.cn/api/paas/v4/"
+api_key_env = "ZAI_API_KEY"
+default_model = "glm-5.1"
+supports_streaming = false
+supports_reasoning_channel = true
+request_adapter = "zhipu_thinking_body"
+thinking_mapping = "thinking.type enabled/disabled; clear_thinking true"
+recommended_max_concurrency = 3
+
+[deepseek]
+protocol = "openai_compatible"
+base_url = "https://api.deepseek.com"
+api_key_env = "DEEPSEEK_API_KEY"
+default_model = "deepseek-v4-flash"
+supports_streaming = false
+supports_reasoning_channel = true
+request_adapter = "deepseek_reasoning_effort"
+thinking_mapping = "thinking.type enabled/disabled"
+recommended_max_concurrency = 10
+
+[aliyun]
+protocol = "openai_compatible"
+base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+api_key_env = "ali_key"
+default_model = "glm-5.1"
+supports_streaming = false
+supports_reasoning_channel = true
+request_adapter = "aliyun_enable_thinking"
+thinking_mapping = "enable_thinking true/false"
+recommended_max_concurrency = 30
+
+[nvidia]
+protocol = "openai_compatible"
+base_url = "https://integrate.api.nvidia.com/v1"
+api_key_env = "nv_key"
+default_model = "openai/gpt-oss-120b"
+supports_streaming = false
+supports_reasoning_channel = true
+request_adapter = "openai_reasoning_effort"
+thinking_mapping = "top-level reasoning_effort; no private thinking body"
+recommended_max_concurrency = 8
+
+[openbayes_gemma]
+protocol = "openai_compatible"
+base_url = "https://hdu-ipg-67y8s8yw5zkl.gear-c1.openbayes.net/v1"
+api_key_env = "OPENBAYES_GEMMA_API_KEY"
+default_model = "google/gemma-4-31b-it"
+supports_streaming = false
+supports_reasoning_channel = false
+request_adapter = "plain_openai"
+thinking_mapping = "no-think vLLM service; no thinking request fields"
+recommended_max_concurrency = 32
+
+[openbayes_gemma_thinking]
+protocol = "openai_compatible"
+base_url = "https://hdu-ipg-67y8s8yw5zkl.gear-c1.openbayes.net/v1"
+api_key_env = "OPENBAYES_GEMMA_API_KEY"
+default_model = "google/gemma-4-31b-it"
+supports_streaming = false
+supports_reasoning_channel = true
+request_adapter = "vllm_gemma_chat_template"
+thinking_mapping = "extra_body.chat_template_kwargs.enable_thinking true/false; vLLM gemma4 reasoning parser"
+recommended_max_concurrency = 4

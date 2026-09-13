@@ -1,0 +1,51 @@
+name = "main"
+tasks = ["T1", "T2", "T3"]
+answer_parse_char_limit = 2000
+
+[matrix]
+a_count = [1, 2, 3, 4, 5]
+b_count = [0, 1, 2, 3, 4, 5]
+information = ["I0", "I1", "I2"]
+
+[resources]
+dataset_families = ["wordnet", "babelnet"]
+wordnet_enabled = true
+babelnet_enabled = true
+babelnet_path = "../../../external/openhownet_resources/unzipped/babel_data"
+min_final_positive_count = 5
+max_seed_per_family = 0
+
+[product]
+product_id = "main"
+tier = "main"
+wordnet_quota_per_stratum = 650
+babelnet_quota_per_stratum = 100
+candidate_scheduler = "reuse_aware_mixed_negatives"
+candidate_window_limit = 64
+
+[budgets]
+max_base_samples = 0
+max_base_samples_per_task_family = 0
+max_cells_per_task_family = 0
+max_seed_reuse = 0
+max_a1_reuse = 0
+max_candidate_reuse = 0
+max_constraint_reuse = 0
+max_pool_reuse = 0
+seed = 13
+
+[provider]
+name = "zhipu"
+protocol = "openai_compatible"
+base_url = "https://open.bigmodel.cn/api/paas/v4/"
+api_key_env = "ZAI_API_KEY"
+model = "glm-5.1"
+timeout_seconds = 60
+max_concurrency = 1
+concurrency_mode = "fixed"
+max_retries = 1
+temperature = 0.0
+max_answer_tokens = 128
+thinking = "off"
+save_reasoning = true
+reasoning_char_limit = 4000

@@ -1,0 +1,63 @@
+{
+  "answer_parse_char_limit": 2000,
+  "budgets": {
+    "cell_order": "balanced",
+    "max_a1_reuse": 0,
+    "max_base_samples": 0,
+    "max_base_samples_per_task_family": 0,
+    "max_candidate_reuse": 0,
+    "max_cells_per_task_family": 0,
+    "max_constraint_reuse": 0,
+    "max_pool_reuse": 0,
+    "max_seed_reuse": 0,
+    "seed": 13
+  },
+  "matrix": {
+    "a_count": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "b_count": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "information": [
+      "I0",
+      "I1",
+      "I2"
+    ]
+  },
+  "name": "test",
+  "product": {
+    "babelnet_quota_per_stratum": 1,
+    "candidate_scheduler": "reuse_aware_mixed_negatives",
+    "candidate_window_limit": 64,
+    "product_id": "test",
+    "shard_size": 100000,
+    "tier": "test",
+    "wordnet_quota_per_stratum": 3
+  },
+  "resources": {
+    "babelnet_enabled": true,
+    "babelnet_path": "external/openhownet_resources/unzipped/babel_data",
+    "dataset_families": [
+      "wordnet",
+      "babelnet"
+    ],
+    "max_seed_per_family": 0,
+    "min_final_positive_count": 5,
+    "wordnet_enabled": true
+  },
+  "tasks": [
+    "T1",
+    "T2",
+    "T3"
+  ]
+}

@@ -1,0 +1,30 @@
+[project]
+name = "bool-logic"
+version = "0.1.0"
+description = "Auditable concept-boundary benchmark pipeline for WordNet and BabelNet tracks."
+requires-python = ">=3.12"
+dependencies = [
+  "nltk",
+  "pydantic",
+  "typer",
+  "httpx",
+  "openai",
+  "matplotlib",
+  "nbclient",
+  "nbformat",
+  "numpy",
+  "pandas",
+]
+
+[project.scripts]
+boollogic = "bool_logic.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.unittest]
+start-dir = "tests"

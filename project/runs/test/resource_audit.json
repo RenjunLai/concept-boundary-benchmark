@@ -1,0 +1,84 @@
+{
+  "experiment": "test",
+  "information_policy": "paired_I0_I1_I2_per_base_sample_id",
+  "matrix": {
+    "a_count": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "b_count": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "information": [
+      "I0",
+      "I1",
+      "I2"
+    ]
+  },
+  "resources": {
+    "babelnet": {
+      "audit_stats": {
+        "clean_surface_and_gloss_count": 6921,
+        "clean_surface_count": 8618,
+        "exact_filtered_surface": "弥",
+        "gloss_count": 6980,
+        "gloss_coverage": 0.6701228878648233,
+        "non_proper_clean_surface_and_gloss_count": 6921,
+        "non_proper_clean_surface_count": 8618,
+        "non_proper_count": 8777,
+        "non_proper_gloss_count": 6980,
+        "raw_chinese_gloss_count": 8489,
+        "raw_chinese_gloss_coverage": 0.8149961597542242,
+        "raw_chinese_synonym_count": 10370,
+        "raw_chinese_synonym_coverage": 0.995583717357911,
+        "raw_clean_chinese_surface_count": 10200,
+        "raw_clean_chinese_surface_coverage": 0.9792626728110599,
+        "raw_noun_synset_count": 10416,
+        "surface_coverage": 0.8273809523809523,
+        "usable_coverage": 0.6644585253456221,
+        "usable_object_count": 6921
+      },
+      "closure_size_distribution": {
+        "0": 4978,
+        "1-19": 1711,
+        "100-499": 46,
+        "20-99": 124,
+        "2000+": 3,
+        "500-1999": 59
+      },
+      "max_seed_per_family": 0,
+      "min_final_positive_count": 5,
+      "usable_object_count": 6921
+    },
+    "wordnet": {
+      "audit_stats": {
+        "clean_surface_count": 57717,
+        "gloss_count": 82115,
+        "gloss_coverage": 1.0,
+        "raw_noun_synset_count": 82115,
+        "surface_coverage": 0.7028801071667783,
+        "usable_coverage": 0.7028801071667783,
+        "usable_object_count": 57717
+      },
+      "closure_size_distribution": {
+        "0": 47074,
+        "1-19": 9744,
+        "100-499": 151,
+        "20-99": 711,
+        "2000+": 12,
+        "500-1999": 25
+      },
+      "max_seed_per_family": 0,
+      "min_final_positive_count": 5,
+      "usable_object_count": 57717
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "information_policy": "I0=no gloss, I1=concept gloss only, I2=concept and candidate gloss",
+  "language_policy": "wordnet=en, babelnet=zh",
+  "renderer_version": "separated_gloss_v2",
+  "request_count": 1080,
+  "request_hash": "28bc29fccd31da1a297b44b6b4e882da",
+  "resource_snapshot_path": "resource_snapshot.json",
+  "samples_path": "samples.jsonl"
+}
